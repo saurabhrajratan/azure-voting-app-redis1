@@ -25,12 +25,12 @@ pipeline {
             sh(script: 'docker compose up -d')
          }
       }
-   //    stage('Run Tests') {
-   //       steps {
-   //          sh(script: """
+      stage('Run Tests') {
+         steps {
+            sh(script: """
   
-   //          pip3 install numpy pytest
-   //          python -m pytest ./tests/test_sample.py
+            pip3 install numpy pytest
+            python -m pytest ./tests/test_sample.py
             
             
             
