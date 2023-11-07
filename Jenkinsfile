@@ -20,11 +20,11 @@ pipeline {
             //      """ )
          }
       }
-   //    stage('Start App') {
-   //       steps {
-   //          sh(script: 'docker compose up -d')
-   //       }
-   //    }
+      stage('Start App') {
+         steps {
+            sh(script: 'docker compose up -d')
+         }
+      }
    //    stage('Run Tests') {
    //       steps {
    //          sh(script: """
