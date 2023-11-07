@@ -7,19 +7,19 @@ pipeline {
             echo "$GIT_BRANCH"
          }
       }
-   //    stage('Docker Build') {
-   //       steps {
-   //          // sh(script: 'docker compose build')
-   //          powershell(script: 'docker images -a')
-   //          powershell(script: """
-   //               cd azure-vote/
-   //               docker images -a
-   //               docker build -t jenkins-pipeline .
-   //               docker images -a
-   //               cd ..
-   //               """ )
-   //       }
-   //    }
+      stage('Docker Build') {
+         steps {
+            // sh(script: 'docker compose build')
+            powershell(script: 'docker images -a')
+            powershell(script: """
+                 cd azure-vote/
+                 docker images -a
+                 docker build -t jenkins-pipeline .
+                 docker images -a
+                 cd ..
+                 """ )
+         }
+      }
    //    stage('Start App') {
    //       steps {
    //          sh(script: 'docker compose up -d')
