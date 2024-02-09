@@ -28,7 +28,7 @@ pipeline {
       stage('Run Tests') {
          steps {
             sh(script: """
-  
+            pip3 --install --upgrade pip
             pip3 install numpy pytest
             python -m pytest ./tests/test_sample.py
 
