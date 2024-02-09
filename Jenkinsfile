@@ -28,10 +28,12 @@ pipeline {
       stage('Run Tests') {
          steps {
             sh(script: """
-            pip3 --install --upgrade pip
-            pip3 install numpy pytest
+            sudo apt-get --purge autoremove python3-pip
+            sudo apt install python3-pip
+            
+            sudo pip3 install numpy pytest
             python -m pytest ./tests/test_sample.py
-
+        
             """)
          }
          post {
