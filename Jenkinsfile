@@ -28,7 +28,7 @@ pipeline {
       stage('Run Tests') {
          steps {
             sh(script: """
-            apt-get --purge autoremove python3-pip
+           
             apt install python3-pip
             
             pip3 install numpy pytest
