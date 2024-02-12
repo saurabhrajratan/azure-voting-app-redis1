@@ -105,7 +105,7 @@ pipeline {
             dir("$WORKSPACE/azure-vote"){
             script{
            
-                     def image = docker.build('stevesam/jenkins-course')
+                     def image = docker.build('sauratan/jenkins-course')
                      image.push()
               }
           }
